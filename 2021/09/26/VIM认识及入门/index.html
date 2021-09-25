@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Codertzj"><link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title> - 我的博客</title>
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+<!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]-->
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/fancybox/jquery.fancybox.min.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head><body style="opacity:0"><header class="head"><h1 class="head-title u-fl"><a href="/">我的博客</a></h1><nav class="head-nav u-fr"><ul class="head-nav__list"><li class="head-nav__item"><a class="head-nav__link" href="/tags">标签</a></li><li class="head-nav__item"><a class="head-nav__link" href="/archives">目录</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__head"><time class="post__time" datetime="2021-09-25T16:14:45.732Z">2021 - 09 - 26 00:14:45</time><h1 class="post__title"><a href="/2021/09/26/VIM%E8%AE%A4%E8%AF%86%E5%8F%8A%E5%85%A5%E9%97%A8/"></a></h1><div class="post__main echo"><h1 id="VIM-认识及入门"><a href="#VIM-认识及入门" class="headerlink" title="VIM 认识及入门"></a>VIM 认识及入门</h1><br />
+
+<p><a name="C66KJ"></a></p>
+<h3 id="什么是VI和VIM"><a href="#什么是VI和VIM" class="headerlink" title="什么是VI和VIM"></a>什么是VI和VIM</h3><p>vi是linux系统中内置的文本编辑器。 <br />vim是vi的**”加强版” **，具有程序编辑的能力，在vi的基础上扩充了很多新功能。<br /></p>
+<p><a name="MIghg"></a></p>
+<h3 id="VIM的介绍"><a href="#VIM的介绍" class="headerlink" title="VIM的介绍"></a>VIM的介绍</h3><ul>
+<li>VIM由三种模式：<ul>
+<li>正常模式，可以通过操作光标进行【删除/复制 粘贴】文档数据</li>
+<li>插入模式：编辑文档内容。</li>
+<li>命令模式：可以进行一些操作。（如：读取，存盘，替换，离开vim等）</li>
+</ul>
+</li>
+<li>模式切换：<ul>
+<li>默认是正常模式，当进入的其他模式，输入**esc **即可切回正常模式。（下面两个需要切换回正常模式操作）</li>
+<li>输入【<strong>i/o/r/a 任意一个大小写</strong>】即可进入编辑模式</li>
+<li>输入【<strong>： 冒号</strong>】即可进入命令行模式</li>
+</ul>
+</li>
+<li>命令行三个退出指令：    **   :wq（write quit 保存并退出）   :q（退出）   :q!（强制退出，不保存）**</li>
+</ul>
+<p><a name="KFlLG"></a></p>
+<h3 id="简单的使用VIM案例"><a href="#简单的使用VIM案例" class="headerlink" title="简单的使用VIM案例"></a>简单的使用VIM案例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//使用vim创建创建一个文件</span><br><span class="line">[root@hspEdu01 ~]<span class="comment"># vim hello.java//如果该文件存在就是编辑，不存在就是创建</span></span><br><span class="line">[root@hspEdu01 ~]<span class="comment"># ls //查看当前目录下的文件</span></span><br><span class="line">	anaconda-ks.cfg  initial-setup-ks.cfg  模板  图片  下载  桌面  **hello.java** 公共  视频  文档  音乐</span><br><span class="line">[root@hspEdu01 ~]<span class="comment"># vim hello.java //进入编辑内容</span></span><br><span class="line">/</span><br><span class="line">  切换模式 【i】，编辑内容</span><br><span class="line">  保存退出  :wq  </span><br><span class="line">/</span><br><span class="line">[root@hspEdu01 ~]<span class="comment"># vim hello.java //此时就可以看到刚才编辑的内容。</span></span><br><span class="line">  public class hello&#123;</span><br><span class="line">    public void main(String[] args)&#123;</span><br><span class="line">       System.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><a name="UMPQ0"></a></p>
+<h3 id="vim的基本操作"><a href="#vim的基本操作" class="headerlink" title="vim的基本操作"></a>vim的基本操作</h3><ul>
+<li>01-复制粘贴 </li>
+<li>02-删除</li>
+<li>03-查找单词  </li>
+<li>04-定位到该文件的首行或尾行 </li>
+<li>05-开启行号 </li>
+<li>06-定位到该文件的某行      </li>
+<li>07-撤销上一步操作</li>
+<li>更多请看API文档<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">01：yy 会复制当前光标所在这一行，p 会粘贴。（如 5yy，则是复制当前往下5行的内容）</span><br><span class="line">02：dd 同上，默认删掉当前光标这行，5dd 则是删除5行</span><br><span class="line">03：输入/单词，回车查找。内容所有包含这个单词的都会有高亮显示，按n查找下一个</span><br><span class="line">04：按大写(G)，会跳转到当前文件内容第一行，按(gg)则是跳转到最后一行。</span><br><span class="line">05：<span class="string">&quot;:set nu&quot;</span> 开启后，左侧会显示当前的行号，<span class="string">&quot;:set nonu&quot;</span>关闭显示</span><br><span class="line">06: 先输入数字X，然后按g会跳转到行号为X那一行。</span><br><span class="line">07：撤销上一步操作内容按u。</span><br></pre></td></tr></table></figure></li>
+</ul>
+</div></header></article><section class="reward"><a class="btn-reward" href="#">打赏</a><div class="reward-wrapper clearfix"><img src="/img/wechat.png" title="微信"></div></section></main><footer class="foot"><div class="foot-copy">&copy; 2021 Codertzj</div></footer>
+<script src="/js/scroller.js"></script>
+
+<script src="/js/main.js"></script>
+</body></html>
